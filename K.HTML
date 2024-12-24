@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Página de Hello Kitty</title>
+    <link rel="stylesheet" href="k.css">
+</head>
+<body>
+    <h1>this for u ❤️</h1>
+    <div class="heart">❤️</div>
+    <section class="gallery">
+        <img src="IMG_0011.jpg" alt="Foto 1">
+        <img src="image.jpg" alt="Foto 2">
+  
+    </section>
+    <div class="button-container">
+        <button onclick="showLetter()">Ver Carta</button>
+    </div>
+    <div class="letter" id="letter">
+        <p class="letter-content">Hey vex,</p>
+        <p class="letter-content">i dont have a lot to say but thank you for come to my life princesa❤️❤️</p>
+        <img src="sanrio-hello-kitty.gif" alt="Hello Kitty">
+    </div>
+    <script>
+        function showLetter() {
+            document.getElementById('letter').style.display = 'block';
+        }
+
+        function createHearts() {
+            const heartContainer = document.querySelector('body');
+            for (let i = 0; i < 20; i++) {
+                const heart = document.createElement('div');
+                heart.className = 'heart';
+                heart.style.left = `${Math.random() * 100}vw`;
+                heart.style.animationDelay = `${Math.random() * 5}s`;
+                heartContainer.appendChild(heart);
+            }
+        }
+        createHearts();
+    </script>
+</body>
+</html>
